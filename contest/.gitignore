@@ -1,0 +1,5 @@
+googletest/*
+CMakeFiles/*
+*.cmake
+*.pc
+CMakeCache.txt
