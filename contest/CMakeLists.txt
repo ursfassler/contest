@@ -6,6 +6,11 @@ add_library(
     "main.cpp"
     )
 
+add_subdirectory(googletest)
+
+target_include_directories(${PROJECT_NAME} PRIVATE googletest/googletest/include 
+                                                   googletest/googlemock/include )
+
 install(
     TARGETS ${PROJECT_NAME}
     ARCHIVE DESTINATION lib
