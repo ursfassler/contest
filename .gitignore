@@ -72,3 +72,7 @@ Thumbs.db
 *.dll
 *.exe
 
+CMakeCache.txt
+CMakeFiles/*
+*.cmake
+*.pc
