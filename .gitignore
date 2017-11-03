@@ -76,3 +76,5 @@ CMakeCache.txt
 CMakeFiles/*
 *.cmake
 *.pc
+bin/
+lib/
