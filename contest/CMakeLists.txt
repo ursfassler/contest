@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 
 project(contest_main)
-add_library(
-    ${PROJECT_NAME} STATIC
+add_executable(
+    ${PROJECT_NAME}
     "main.cpp"
     )
 
@@ -10,11 +10,8 @@ add_subdirectory(googletest)
 
 target_include_directories(${PROJECT_NAME} PRIVATE googletest/googletest/include 
                                                    googletest/googlemock/include )
+target_link_libraries(${PROJECT_NAME} gmock gtest)
 
-install(
-    TARGETS ${PROJECT_NAME}
-    ARCHIVE DESTINATION lib
-    )
 
 #TARGET_LINK_LIBRARIES(${PROJECT_NAME} gmock pthread)
 #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
