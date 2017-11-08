@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 
+project("contest")
 
 if(NOT CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
     message("Setting archive output directory to ${CMAKE_BINARY_DIR}/lib")
