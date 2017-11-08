@@ -12,15 +12,13 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL ${MSVC_COMPILER_NAME})
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 endif()
 
-add_subdirectory(googletest)
-
 add_executable(
     ${PROJECT_NAME}
     "main.cpp"
     )
 
-target_include_directories(${PROJECT_NAME} PRIVATE googletest/googletest/include
-                                                   googletest/googlemock/include )
+target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
+                                                   ${GOOLGE_MOCK_INCLUDE_DIR} )
 target_link_libraries(${PROJECT_NAME} gmock gtest)
 
 
