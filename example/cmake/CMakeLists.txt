@@ -6,8 +6,8 @@ add_executable(
     "unittest.cpp"
     )
 
-TARGET_LINK_LIBRARIES(${PROJECT_NAME} contest_main gmock pthread)
+#TARGET_LINK_LIBRARIES(${PROJECT_NAME} contest_main gmock)
 
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${PROJECT_NAME}
-)
+#add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+#    COMMAND ${PROJECT_NAME}
+#)

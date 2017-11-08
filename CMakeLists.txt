@@ -21,3 +21,4 @@ endif()
 
 
 add_subdirectory(contest)
+add_subdirectory(example)
