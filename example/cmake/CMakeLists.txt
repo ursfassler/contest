@@ -5,6 +5,10 @@ add_executable(
     ${PROJECT_NAME}
     "unittest.cpp"
     )
+target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
+                                                   ${GOOLGE_MOCK_INCLUDE_DIR} )
+target_link_libraries(${PROJECT_NAME} gmock gtest)
+
 
 #TARGET_LINK_LIBRARIES(${PROJECT_NAME} contest_main gmock)
 
