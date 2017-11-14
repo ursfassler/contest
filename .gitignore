@@ -73,8 +73,11 @@ Thumbs.db
 *.exe
 
 CMakeCache.txt
-CMakeFiles/*
+CMakeFiles/
 *.cmake
 *.pc
 bin/
 lib/
+googletest-build
+googletest-download
+googletest-src
