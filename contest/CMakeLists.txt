@@ -14,7 +14,7 @@ endif()
 
 add_executable(
     ${PROJECT_NAME}
-    "main.cpp"
+    "main.cpp" "ide_printer.h"
     )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
