@@ -8,7 +8,8 @@ TEST(UnitTest, test2) { EXPECT_TRUE(true); }
 TEST(UnitTest, test3) { EXPECT_TRUE(false); }
 
 int main(int argc, char **argv) {
-  /*testing::InitGoogleMock(&argc, argv);
+::testing::InitGoogleTest(&argc, argv);
+      	/*testing::InitGoogleMock(&argc, argv);
 
   ::testing::TestEventListeners &listeners =
       ::testing::UnitTest::GetInstance()->listeners();
