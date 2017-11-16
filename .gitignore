@@ -73,8 +73,9 @@ Thumbs.db
 *.exe
 
 CMakeCache.txt
-CMakeFiles/*
+CMakeFiles/
 *.cmake
 *.pc
 bin/
 lib/
+*.dir
