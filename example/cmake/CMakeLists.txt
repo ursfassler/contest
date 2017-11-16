@@ -2,16 +2,6 @@ cmake_minimum_required(VERSION 2.8)
 
 project(contest_example_cmake)
 
-#this is a workaround because MSVC is a CMake internal variable which leads to confusion
-#when doing STREQUAL on it
-set(MSVC_COMPILER_NAME "MSVC")
-
-# Prevent GoogleTest from overriding our compiler/linker options
-# when building with Visual Studio
-if(CMAKE_CXX_COMPILER_ID STREQUAL ${MSVC_COMPILER_NAME})
-    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-endif()
-
 message(MESSAGE "INC: ${CONTEST_INCLUDE_DIR}")
 add_executable(
     ${PROJECT_NAME}
