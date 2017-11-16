@@ -25,13 +25,13 @@ set(MSVC_COMPILER_NAME "MSVC")
 
 # Prevent GoogleTest from overriding our compiler/linker options
 # when building with Visual Studio
-if(CMAKE_CXX_COMPILER_ID STREQUAL ${MSVC_COMPILER_NAME})
-    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-endif()
+#if(CMAKE_CXX_COMPILER_ID STREQUAL ${MSVC_COMPILER_NAME})
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+#endif()
 
 set(GOOGLE_TEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include)
 set(GOOGLE_MOCK_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googlemock/include)
-
+set(CONTEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/contest/)
 add_subdirectory(googletest)
 
 

@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0.2)
 
 project(contest_main)
 
+set(CONTEST_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/")
+
 #this is a workaround because MSVC is a CMake internal variable which leads to confusion
 #when doing STREQUAL on it
 set(MSVC_COMPILER_NAME "MSVC")
