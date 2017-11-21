@@ -15,11 +15,18 @@ target_include_directories("${PROJECT_NAME}_Tests" PRIVATE ${GOOGLE_TEST_INCLUDE
                                                    ${CONTEST_INCLUDE_DIR})
 target_link_libraries("${PROJECT_NAME}_Tests" gmock gtest)
 
-
-add_test(TARGET ${PROJECT_NAME} "${PROJECT_NAME}_Tests")
+enable_testing()
+add_test(TARGET ${PROJECT_NAME} COMMAND "${PROJECT_NAME}_Tests")
 
 #TARGET_LINK_LIBRARIES(${PROJECT_NAME} contest_main gmock)
 
+#run the tests after building the main executable
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND "${PROJECT_NAME}_Tests"
 )
+
+# run the tests after building them
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND "${PROJECT_NAME}_Tests"
+)
+
