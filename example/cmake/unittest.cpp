@@ -1,11 +1,11 @@
 #include "gmock/gmock.h"
 #include <ide_printer.h>
 
-TEST(UnitTest, test1) { EXPECT_FALSE(true); }
+TEST(UnitTest, Failing_Test) { EXPECT_FALSE(true); }
 
-TEST(UnitTest, test2) { EXPECT_TRUE(true); }
+TEST(UnitTest, Succeeding_Test) { EXPECT_TRUE(true); }
 
-TEST(UnitTest, test3) { EXPECT_TRUE(false); }
+TEST(UnitTest, Succeeding_Test_2) { EXPECT_TRUE(false); }
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

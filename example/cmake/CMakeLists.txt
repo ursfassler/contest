@@ -16,8 +16,10 @@ target_include_directories("${PROJECT_NAME}_Tests" PRIVATE ${GOOGLE_TEST_INCLUDE
 target_link_libraries("${PROJECT_NAME}_Tests" gmock gtest)
 
 
+add_test(TARGET ${PROJECT_NAME} "${PROJECT_NAME}_Tests")
+
 #TARGET_LINK_LIBRARIES(${PROJECT_NAME} contest_main gmock)
 
-#add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-#    COMMAND ${PROJECT_NAME}
-#)
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND "${PROJECT_NAME}_Tests"
+)
