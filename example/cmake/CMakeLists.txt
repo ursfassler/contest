@@ -9,7 +9,7 @@ add_executable(
     "example.cpp"
     )
 
-add_executable("${PROJECT_NAME}_Tests" "unittest.cpp")
+add_executable("${PROJECT_NAME}_Tests" "unittest.cpp" "${CONTEST_INCLUDE_DIR}/ide_printer.h")
 target_include_directories("${PROJECT_NAME}_Tests" PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
                                                    ${GOOLGE_MOCK_INCLUDE_DIR}
                                                    ${CONTEST_INCLUDE_DIR})

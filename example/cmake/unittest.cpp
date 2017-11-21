@@ -17,10 +17,5 @@ int main(int argc, char **argv) {
   delete listeners.Release(listeners.default_result_printer());
   listeners.Append(new IdePrinter());
 
-  // C:\Code\contest\example\cmake\example.cpp(6): error C2065: 'blord':
-  // undeclared identifier
-  std::cout << "C:\\Code\\contest\\example\\cmake\\example.cpp(6:6): error "
-               "C2065: 'uttt': undeclared identifier\n";
-
   return RUN_ALL_TESTS();
 }
