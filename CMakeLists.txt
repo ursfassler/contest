@@ -38,7 +38,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
                                                    ${GOOLGE_MOCK_INCLUDE_DIR} )
 target_link_libraries(${PROJECT_NAME} gmock gtest)
 
-
-
-add_subdirectory(src)
 add_subdirectory(example)
