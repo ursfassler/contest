@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 2.8)
 project(contest_example_cmake)
 
 
-message(MESSAGE "INC: ${CONTEST_INCLUDE_DIR}")
 add_executable(
     ${PROJECT_NAME}
     "example.cpp"

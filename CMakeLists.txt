@@ -24,18 +24,22 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 set(GOOGLE_TEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include)
 set(GOOGLE_MOCK_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googlemock/include)
-set(CONTEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/contest/)
 add_subdirectory(googletest)
 
-set(CONTEST_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
+#building context
+set(CONTEST_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
+include_directories(${CONTEST_INCLUDE_DIR})
 add_executable(
     ${PROJECT_NAME}
-    "src/main.cpp" "src/ide_printer.h"
+    "src/main.cpp"
+    "include/ide_printer.h"
     )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
-                                                   ${GOOLGE_MOCK_INCLUDE_DIR} )
+                                                   ${GOOLGE_MOCK_INCLUDE_DIR}
+                                                   ${CONTEST_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} gmock gtest)
 
+# adding example projects
 add_subdirectory(example)
