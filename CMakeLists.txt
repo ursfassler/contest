@@ -27,6 +27,18 @@ set(GOOGLE_MOCK_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googlemock/in
 set(CONTEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/contest/)
 add_subdirectory(googletest)
 
+set(CONTEST_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
-add_subdirectory(contest)
+add_executable(
+    ${PROJECT_NAME}
+    "src/main.cpp" "src/ide_printer.h"
+    )
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
+                                                   ${GOOLGE_MOCK_INCLUDE_DIR} )
+target_link_libraries(${PROJECT_NAME} gmock gtest)
+
+
+
+add_subdirectory(src)
 add_subdirectory(example)
