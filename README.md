@@ -1,8 +1,8 @@
 # tiny-tdd
 
-**contest** ist a "poor man's test driven development solution" for C++ projects. It provides a way to seamlessly integrate testing into any editor/IDE, byshowing failed tests on the same level as compilation errors.
+**tiny-tdd** ist a "poor man's test driven development solution" for C++ projects. It provides a way to seamlessly integrate testing into any editor/IDE, byshowing failed tests on the same level as compilation errors.
 
-Contest is a header file a printer for [googletest](https://github.com/google/googletest) which formats the test output similar to a compiler output, so the failed tests can be shown in an IDE as a post-build steps. The header file (contest/ide_printer.h) can be used standalone in any project using google test. An example on how to set up the custom printer is found in (examples/cmake/unittests.h) 
+tiny-tdd is a header file a printer for [googletest](https://github.com/google/googletest) which formats the test output similar to a compiler output, so the failed tests can be shown in an IDE as a post-build steps. The header file (contest/ide_printer.h) can be used standalone in any project using google test. An example on how to set up the custom printer is found in (examples/cmake/unittests.h) 
 
 # Dependencies
 
