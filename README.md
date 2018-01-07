@@ -2,15 +2,15 @@
 
 **tiny-tdd** ist a "poor man's test driven development solution" for C++ projects. It provides a way to seamlessly integrate testing into any editor/IDE, byshowing failed tests on the same level as compilation errors.
 
-tiny-tdd is a header file a printer for [googletest](https://github.com/google/googletest) which formats the test output similar to a compiler output, so the failed tests can be shown in an IDE as a post-build steps. The header file (contest/ide_printer.h) can be used standalone in any project using google test. An example on how to set up the custom printer is found in (examples/cmake/unittests.h) 
+tiny-tdd is a header file a printer for [googletest/googlemock](https://github.com/google/googletest) which formats the test output similar to a compiler output, so the failed tests can be shown in an IDE as a post-build steps. The header file (tiny-tdd/ide_printer.h) can be used standalone in any project using google test. An example on how to set up the custom printer is found in (examples/cmake/unittests.h) 
 
 # Dependencies
 
-contest depends on googletest (obviously) and uses ```std::cout``` to print out the error messages. 
+tiny-tdd depends on googletest (obviously) and uses ```std::cout``` to print out the error messages. But since it is a header-only you can easily integrate it into your project if you already have google test integrated. 
 
-## Compatibvility
+## Compatibility
 
-contest should be buildable with any compiler that is able to build google tests. 
+tiny-tdd should be buildable with any compiler that is able to build google tests. 
 
 ### Tested IDEs 
 
@@ -26,7 +26,7 @@ in order to build the exmaple project google test is pulled in as a git submodul
 
 Buikding the projects can be done with 
 ```cmake . && make``` 
-this builds google test and contest
+this builds google test and tiny-tdd
 
 
 

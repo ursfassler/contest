@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-project("contest")
+project("tiny-tdd")
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -28,8 +28,8 @@ add_subdirectory(googletest)
 
 
 #building context
-set(CONTEST_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
-include_directories(${CONTEST_INCLUDE_DIR})
+set(TINYTDD_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
+include_directories(${TINYTDD_INCLUDE_DIR})
 add_executable(
     ${PROJECT_NAME}
     "src/main.cpp"
@@ -38,7 +38,7 @@ add_executable(
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
                                                    ${GOOLGE_MOCK_INCLUDE_DIR}
-                                                   ${CONTEST_INCLUDE_DIR})
+                                                   ${TINYTDD_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} gmock gtest)
 
 # adding example projects
