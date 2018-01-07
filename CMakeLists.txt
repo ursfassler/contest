@@ -30,16 +30,12 @@ add_subdirectory(googletest)
 #building context
 set(TINYTDD_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 include_directories(${TINYTDD_INCLUDE_DIR})
-add_executable(
-    ${PROJECT_NAME}
-    "src/main.cpp"
-    "include/ide_printer.h"
-    )
+add_library(
+    ${PROJECT_NAME} INTERFACE)
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
-                                                   ${GOOLGE_MOCK_INCLUDE_DIR}
-                                                   ${TINYTDD_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} gmock gtest)
+target_include_directories(${PROJECT_NAME} INTERFACE ${TINYTDD_INCLUDE_DIR})
+
+target_link_libraries(${PROJECT_NAME} INTERFACE gmock gtest)
 
 # adding example projects
 add_subdirectory(example)
