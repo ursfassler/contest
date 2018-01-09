@@ -1,0 +1,3 @@
+/usr/local/lib/cmake/tiny-tdd/tiny-tddTargets.cmake
+/usr/local/lib/cmake/tiny-tdd/tiny-tddConfig.cmake
+/usr/local/lib/cmake/tiny-tdd/tiny-tddConfigVersion.cmake

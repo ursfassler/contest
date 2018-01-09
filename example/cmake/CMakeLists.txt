@@ -14,9 +14,11 @@ add_executable(
     )
 
 add_executable("${PROJECT_NAME}_Tests" "unittest.cpp")
-target_include_directories("${PROJECT_NAME}_Tests" PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
-                                                   ${GOOLGE_MOCK_INCLUDE_DIR})
 target_link_libraries("${PROJECT_NAME}_Tests" PRIVATE gmock gtest tiny-tdd::tiny-tdd)
+
+target_include_directories("${PROJECT_NAME}_Tests" PRIVATE ${GOOGLE_TEST_INCLUDE_DIR}
+${GOOLGE_MOCK_INCLUDE_DIR}
+${tiny-tdd_INCLUDE_DIR})
 
 enable_testing()
 add_test(TARGET ${PROJECT_NAME} COMMAND "${PROJECT_NAME}_Tests")
