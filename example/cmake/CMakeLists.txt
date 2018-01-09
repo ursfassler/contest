@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.1)
 
 project(contest_example_cmake)
 
-find_package(tiny-tdd)
+find_package(tiny-tdd REQUIRED)
 
 set(GOOGLE_TEST_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include)
 set(GOOGLE_MOCK_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googlemock/include)
