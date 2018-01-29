@@ -13,7 +13,7 @@ target_link_libraries(${PROJECT_NAME} INTERFACE gmock gtest)
 
 # installation properties follow below
 
-install(TARGETS tiny-tdd EXPORT tinyTddTargets
+install(TARGETS ${PROJECT_NAME} EXPORT tinyTddTargets
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
@@ -23,7 +23,7 @@ install(TARGETS tiny-tdd EXPORT tinyTddTargets
 install(EXPORT tinyTddTargets
     FILE ${PROJECT_NAME}Targets.cmake
     NAMESPACE tiny-tdd::
-    DESTINATION lib/cmake/tiny-tdd
+    DESTINATION lib/cmake/${PROJECT_NAME}
 )
 
 
@@ -33,5 +33,5 @@ write_basic_package_version_file("tiny-tddConfigVersion.cmake"
   COMPATIBILITY SameMajorVersion)
 
 install(FILES "tiny-tddConfig.cmake" "tiny-tddConfigVersion.cmake"
-    DESTINATION lib/cmake/tiny-tdd)
+    DESTINATION lib/cmake/${PROJECT_NAME})
 
